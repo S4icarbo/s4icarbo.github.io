@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="Lights.png"> 
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+
+<script>
+
+/*Current date script credit: 
+JavaScript Kit (www.javascriptkit.com)
+Over 200+ free scripts here!
+*/
+
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()+1
+if (month<10)
+month="0"+month
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+document.write("<small><font color='000000' face='Arial'><b>"+month+"/"+daym+"/"+year+"</b></font></small>")
+
+
+</script>
+
+
+<script language="JavaScript1.2">
+<!--
+
+
+var trailLength = 8 // The length of trail (8 by default; put more for longer "tail")
+var path = Cursor.png // URL of your image
+
+var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+var i,d = 0
+
+function initTrail() { // prepares the script
+	images = new Array() // prepare the image array
+	for (i = 0; i < parseInt(trailLength); i++) {
+		images[i] = new Image()
+		images[i].src = path
+	}
+	storage = new Array() // prepare the storage for the coordinates
+	for (i = 0; i < images.length*3; i++) {
+		storage[i] = 0
+	}
+	for (i = 0; i < images.length; i++) { // make divs for IE and layers for Navigator
+		document.write('<div id="obj' + i + '" style="position: absolute; z-Index: 100; height: 0; width: 0"><img src="' + images[i].src + '"></div>')
+	}
+	trail()
+}
+function trail() { // trailing function
+	for (i = 0; i < images.length; i++) { // for every div/layer
+		document.getElementById("obj" + i).style.top = storage[d]+'px' // the Y-coordinate
+		document.getElementById("obj" + i).style.left = + storage[d+1]+'px' // the X-coordinate
+		d = d+2
+	}
+	for (i = storage.length; i >= 2; i--) { // save the coordinate for the div/layer that's behind
+		storage[i] = storage[i-2]
+	}
+	d = 0 // reset for future use
+	var timer = setTimeout("trail()",10) // call recursively 
+}
+function processEvent(e) { // catches and processes the mousemove event 
+	if (window.event) { // for IE
+		storage[0] = window.event.y+standardbody.scrollTop+10
+		storage[1] = window.event.x+standardbody.scrollLeft+10
+	} else {
+		storage[0] = e.pageY+12
+		storage[1] = e.pageX+12
+	}
+}
+
+	initTrail() 
+	document.onmousemove = processEvent // start capturing
+
+//-->
+</script>>
+
+
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="Lights.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>Smart Home Features</b></h1>
+    
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Lights.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Smart Lighting</b></p>
+        <p>Smart lights can be a huge convenience when you don't want to get off the couch or when you've just gotten comfortable in bed. Their price falls around $50 to implement.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src= "Romba.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> 
+      <div class="w3-container w3-white">
+        <p><b>Cleaning Robots</b></p>
+        <p>Cleaning robots such as Roombas can make keeping dirt, dust, and fur off your floors easy. These are especially useful for elderly or disabled persons because they can clean in hard to get areas. Depending on their quailty they most reliable ones cost between $100-$2000.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src= "Thermostat.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Thermostat Control</b></p>
+        <p>Smart thermostats can save time an money as you come home to a warm or cool house without leaveing anything unnessary on to waste your money. This can be done from your couch or your office. And combined with a smart timer you can wake up to a warmed room. This system needs professional installation which can cost from $200 to $1000.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Camera.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Smart Cameras</b></p>
+        <p>Smart cameras allow the user to monitor their homes remotely or detect trouble when you are home. This can let home owners rest easy and safely. The cost of the camera itself will come to around $200 then operating it will cost about $20/month. 
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="Lock.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Smart Lock</b></p>
+        <p>Smart locks can save the trouble of dragging out your keys, taking time out of your day to be home to let someone like a repair man in, or allowing guests to enter without stopping what you're doing. Some even come with voice control and tamper alarms. They can be aquired for between $100 and $300.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="Washing.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Smart Washing Machine</b></p>
+        <p>Costing from $750-$1000 a smart washing machine will remove the doubt of did I remember to press the on button? Is there wet luandry sitting in there?</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+ 
+    
+    
+ 
+<!-- End page content -->
+
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+ 

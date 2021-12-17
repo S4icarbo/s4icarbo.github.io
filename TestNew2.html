@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" type="image/x-icon" href="Smart6.jpg"> 
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
+<style>
+<!--
+.styling{
+background-color:black;
+color:lime;
+font: bold 18px MS Sans Serif;
+padding: 3px;
+}
+-->
+</style>
+<body>
+ 
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+<span id="digitalclock" class="styling"></span>
+
+<script>
+<!--
+
+/*****************************************
+* LCD Clock script- by Javascriptkit.com
+* Featured on/available at http://www.dynamicdrive.com/
+* This notice must stay intact for use
+*****************************************/
+
+var alternate=0
+
+function show(){
+var clockobj=document.getElementById? document.getElementById("digitalclock") : document.all.digitalclock
+var Digital=new Date()
+var hours=Digital.getHours()
+var minutes=Digital.getMinutes()
+var dn="AM"
+
+if (hours==12) dn="PM" 
+if (hours>12){
+dn="PM"
+hours=hours-12
+}
+if (hours==0) hours=12
+if (hours.toString().length==1)
+hours="0"+hours
+if (minutes<=9)
+minutes="0"+minutes
+
+if (alternate==0)
+clockobj.innerHTML=hours+"<font color='lime'> : </font>"+minutes+" "+"<sup>"+dn+"</sup>"
+else
+clockobj.innerHTML=hours+"<font color='black'> : </font>"+minutes+" "+"<sup>"+dn+"</sup>"
+alternate=(alternate==0)? 1 : 0
+setTimeout("show()",1000)
+}
+window.onload=show
+
+//-->
+</script>
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Smart Homes</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="SmartHomeExamples.html" class="w3-bar-item w3-button">Smart Home Features</a>
+      <a href="SmartHomeInfo.html" class="w3-bar-item w3-button">More Information</a>
+    </div>
+  </div> 
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="Smart1.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Smart Homes</h1>
+  </div>
+</header> 
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="Smart4.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Smart Homes</h1><br>
+      <h5 class="w3-center"></h5>
+      <p class="w3-large">Smart Homes, or home automation, is a system of interent connected devices and appliances that can be controlled often remotely. Typically the devices will be connected to a smart home hub, but not always. A smart home hub (or smart hub, gateway, bridge, controller, or coordinator) in what allows the different componets of a smart home to communicate and respond back to each other through a central point.   </p>
+      <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Big Players in Smart Homes</h1><br>
+      <h4>Google Nest</h4>
+      <p class="w3-text-grey">Including Pixel, Chromebooks, Fitbit devices, and other hardware Google Nest had a revenue of $4.4 billion. Some of its most popular smart home items are the Nest Mini, Nest Hub and Nest Hub Max, Nest thermostat, Nest Cam, and the Nest Protect smoke alarm.</p><br>
+    
+      <h4>Amazon</h4>
+      <p class="w3-text-grey">When people think of smart speakers most think of Amazon's Echo or Echo Dot. By 2019 Amazon had passed a combined 100 million Alexa-powered devices sold. Many connected home product compaines support the use of Alexa for voice activation and control. Amazon also leads in smart bulbs, door locks, security systems and kitchen appliances. Its website is the most populr superstore for Iot items.</p><br>
+    
+      <h4>Apple HomeKit</h4>
+      <p class="w3-text-grey">Apple HomeKit is another large seller of smart items including bulbs, locks, motion sensors, room monitors, outlets, switches, and thermostats, but do not include Apple smartwatches. Many brands that fall under Apple HomeKit are third-party companies that have reoganized to be dedicated to Apple.</p><br>
+    
+      <h4>Ecobee</h4>
+      <p class="w3-text-grey">Ecobee is one of the more recognizable brands especially in its base country Canada, despite offering comparitively fewer products. Their most popular product is their ecobee3 lite which applies voice control to a smart thermostat.</p><br>
+    
+      <h4>Bosch Smart Home Solutions</h4>
+      <p class="w3-text-grey">Bosch leads the market in Europe with their devisions in heating and lighting, the Philips Hue lights making up a significant portion of that, along with their 360-dgree cameras, video doorbells, and kitchen appliances.</p><br> 
+	  
+	   <h4>Expected Change</h4>
+      <p class="w3-text-grey">As companies focused in Iot expand they are expected to consolidate. Currently larger compaines like Apple, Amazon, Google, and Bosch are buying up innovative startups.</p>    
+    </div>
+    
+   
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Contact Section -->
+ 
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Made by Isabel Carbonell <br> Period 6</p>
+</footer>
+
+</body>
+</html>
